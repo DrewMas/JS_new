@@ -1,0 +1,35 @@
+.product-image {
+    width: 200px;
+}
+
+.wrap {
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.post-card {
+    width: 220px;
+    border-left: 2px solid maroon;
+    padding-left: 5px;
+    margin: 5px;
+    background:antiquewhite ;
+    box-shadow: olive 3px 3px ;
+}
+
+.user-box {
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.user-block {
+    width: 500px;
+    border-left: 2px solid maroon;
+    padding-left: 5px;
+    margin: 5px;
+    background:antiquewhite ;
+    box-shadow: olive 3px 3px ;
+}
