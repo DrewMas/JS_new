@@ -400,45 +400,19 @@
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!
 
 
-// let trafficLight = confirm('Is traffic light working?');
-// if (!trafficLight){
-//     alert('Do whatever you want');
-// } else {
-//     let color = prompt('What traffic light color do you see?');
-//     let isRoadClear = confirm('Is road clear?');
-//
-//     if (color === 'green' && isRoadClear) {
-//         alert('Go');
-//     } else if (color === 'green' && !isRoadClear) {
-//         alert('Let them ride');
-//     } else if (color === 'yellow' && isRoadClear) {
-//         alert('Wait a sec, let them ride');
-//     } else if (color === 'yellow' && !isRoadClear) {
-//         alert('It does not worth it, wait');
-//     } else if (color === 'red' && isRoadClear){
-//         alert('I do not think you want to die');
-//     } else if (color === 'red' && !isRoadClear) {
-//         alert('Stand still and wait till green');
-//     }
-// }
-//
-//
 // let color = prompt('What traffic light color do you see?');
 // let isRoadClear = confirm('Is road clear?');
 //
-// if (color === 'green' && isRoadClear) {
-//     alert('Go');
-// } else if (color === 'green' && !isRoadClear) {
-//     alert('Let them ride');
-// } else if (color === 'yellow' && isRoadClear) {
-//     alert('Wait a sec, let them ride');
-// } else if (color === 'yellow' && !isRoadClear) {
-//     alert('It does not worth it, wait');
-// } else if (color === 'red' && isRoadClear){
-//     alert('I do not think you want to die');
-// } else if (color === 'red' && !isRoadClear) {
-//     alert('Stand still and wait till green');
-// } else {
-//     alert('Do whatever you want');
+// switch (color) {
+//     case 'green':
+//         isRoadClear ? alert('Go') : alert(`Let them ride`);
+//         break;
+//     case 'yellow':
+//         isRoadClear ? alert(`Wait a sec, let them ride`) : alert(`It doesn't worth it, stay for a bit`);
+//         break;
+//     case 'red':
+//         isRoadClear ? alert(`I don't thing you wanna die`) : alert('Stand still and wait till green');
+//         break;
+//     default:
+//         alert(`Do whatever you want`);
 // }
-
