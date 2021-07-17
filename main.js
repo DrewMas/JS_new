@@ -727,260 +727,509 @@
 // </div>`)
 // }
 // document.write(`</div>`);
+//
+//
+// document.write(`<div class="wrap">`);
+// for (const user of users) {
+//     let {userId, title,body} = user;
+//     document.write(`<div class="post-card">
+// // <h3>${userId} - ${title}</h3>
+// // <p>${body}</p>
+// // </div>`)
+// }
+// document.write(`</div>`);
 
 // HOME WORK 3
 //
 //
-/*За допомогою циклу вивести всю інформацію про користувачів використовуючи шаблон Template 1.1
+//*За допомогою циклу вивести всю інформацію про користувачів використовуючи шаблон Template 1.1
 //			* за допомоги стилів, побудувати сітку по 2 об'єкта в лінію
 //			*
 //			* */
 //
-let usersList = [
-    {
-        id: 1,
-        name: 'Leanne Graham',
-        username: 'Bret',
-        email: 'Sincere@april.biz',
-        address: {
-            street: 'Kulas Light',
-            suite: 'Apt. 556',
-            city: 'Gwenborough',
-            zipcode: '92998-3874',
-            geo: {
-                lat: '-37.3159',
-                lng: '81.1496'
-            }
-        },
-        phone: '1-770-736-8031 x56442',
-        website: 'hildegard.org',
-        company: {
-            name: 'Romaguera-Crona',
-            catchPhrase: 'Multi-layered client-server neural-net',
-            bs: 'harness real-time e-markets'
-        }
-    },
-    {
-        id: 2,
-        name: 'Ervin Howell',
-        username: 'Antonette',
-        email: 'Shanna@melissa.tv',
-        address: {
-            street: 'Victor Plains',
-            suite: 'Suite 879',
-            city: 'Wisokyburgh',
-            zipcode: '90566-7771',
-            geo: {
-                lat: '-43.9509',
-                lng: '-34.4618'
-            }
-        },
-        phone: '010-692-6593 x09125',
-        website: 'anastasia.net',
-        company: {
-            name: 'Deckow-Crist',
-            catchPhrase: 'Proactive didactic contingency',
-            bs: 'synergize scalable supply-chains'
-        }
-    },
-    {
-        id: 3,
-        name: 'Clementine Bauch',
-        username: 'Samantha',
-        email: 'Nathan@yesenia.net',
-        address: {
-            street: 'Douglas Extension',
-            suite: 'Suite 847',
-            city: 'McKenziehaven',
-            zipcode: '59590-4157',
-            geo: {
-                lat: '-68.6102',
-                lng: '-47.0653'
-            }
-        },
-        phone: '1-463-123-4447',
-        website: 'ramiro.info',
-        company: {
-            name: 'Romaguera-Jacobson',
-            catchPhrase: 'Face to face bifurcated interface',
-            bs: 'e-enable strategic applications'
-        }
-    },
-    {
-        id: 4,
-        name: 'Patricia Lebsack',
-        username: 'Karianne',
-        email: 'Julianne.OConner@kory.org',
-        address: {
-            street: 'Hoeger Mall',
-            suite: 'Apt. 692',
-            city: 'South Elvis',
-            zipcode: '53919-4257',
-            geo: {
-                lat: '29.4572',
-                lng: '-164.2990'
-            }
-        },
-        phone: '493-170-9623 x156',
-        website: 'kale.biz',
-        company: {
-            name: 'Robel-Corkery',
-            catchPhrase: 'Multi-tiered zero tolerance productivity',
-            bs: 'transition cutting-edge web services'
-        }
-    },
-    {
-        id: 5,
-        name: 'Chelsey Dietrich',
-        username: 'Kamren',
-        email: 'Lucio_Hettinger@annie.ca',
-        address: {
-            street: 'Skiles Walks',
-            suite: 'Suite 351',
-            city: 'Roscoeview',
-            zipcode: '33263',
-            geo: {
-                lat: '-31.8129',
-                lng: '62.5342'
-            }
-        },
-        phone: '(254)954-1289',
-        website: 'demarco.info',
-        company: {
-            name: 'Keebler LLC',
-            catchPhrase: 'User-centric fault-tolerant solution',
-            bs: 'revolutionize end-to-end systems'
-        }
-    },
-    {
-        id: 6,
-        name: 'Mrs. Dennis Schulist',
-        username: 'Leopoldo_Corkery',
-        email: 'Karley_Dach@jasper.info',
-        address: {
-            street: 'Norberto Crossing',
-            suite: 'Apt. 950',
-            city: 'South Christy',
-            zipcode: '23505-1337',
-            geo: {
-                lat: '-71.4197',
-                lng: '71.7478'
-            }
-        },
-        phone: '1-477-935-8478 x6430',
-        website: 'ola.org',
-        company: {
-            name: 'Considine-Lockman',
-            catchPhrase: 'Synchronised bottom-line interface',
-            bs: 'e-enable innovative applications'
-        }
-    },
-    {
-        id: 7,
-        name: 'Kurtis Weissnat',
-        username: 'Elwyn.Skiles',
-        email: 'Telly.Hoeger@billy.biz',
-        address: {
-            street: 'Rex Trail',
-            suite: 'Suite 280',
-            city: 'Howemouth',
-            zipcode: '58804-1099',
-            geo: {
-                lat: '24.8918',
-                lng: '21.8984'
-            }
-        },
-        phone: '210.067.6132',
-        website: 'elvis.io',
-        company: {
-            name: 'Johns Group',
-            catchPhrase: 'Configurable multimedia task-force',
-            bs: 'generate enterprise e-tailers'
-        }
-    },
-    {
-        id: 8,
-        name: 'Nicholas Runolfsdottir V',
-        username: 'Maxime_Nienow',
-        email: 'Sherwood@rosamond.me',
-        address: {
-            street: 'Ellsworth Summit',
-            suite: 'Suite 729',
-            city: 'Aliyaview',
-            zipcode: '45169',
-            geo: {
-                lat: '-14.3990',
-                lng: '-120.7677'
-            }
-        },
-        phone: '586.493.6943 x140',
-        website: 'jacynthe.com',
-        company: {
-            name: 'Abernathy Group',
-            catchPhrase: 'Implemented secondary concept',
-            bs: 'e-enable extensible e-tailers'
-        }
-    },
-    {
-        id: 9,
-        name: 'Glenna Reichert',
-        username: 'Delphine',
-        email: 'Chaim_McDermott@dana.io',
-        address: {
-            street: 'Dayna Park',
-            suite: 'Suite 449',
-            city: 'Bartholomebury',
-            zipcode: '76495-3109',
-            geo: {
-                lat: '24.6463',
-                lng: '-168.8889'
-            }
-        },
-        phone: '(775)976-6794 x41206',
-        website: 'conrad.com',
-        company: {
-            name: 'Yost and Sons',
-            catchPhrase: 'Switchable contextually-based project',
-            bs: 'aggregate real-time technologies'
-        }
-    },
-    {
-        id: 10,
-        name: 'Clementina DuBuque',
-        username: 'Moriah.Stanton',
-        email: 'Rey.Padberg@karina.biz',
-        address: {
-            street: 'Kattie Turnpike',
-            suite: 'Suite 198',
-            city: 'Lebsackbury',
-            zipcode: '31428-2261',
-            geo: {
-                lat: '-38.2386',
-                lng: '57.2232'
-            }
-        },
-        phone: '024-648-3804',
-        website: 'ambrose.net',
-        company: {
-            name: 'Hoeger LLC',
-            catchPhrase: 'Centralized empowering task-force',
-            bs: 'target end-to-end models'
-        }
-    }
+// let usersList = [
+//     {
+//         id: 1,
+//         name: 'Leanne Graham',
+//         username: 'Bret',
+//         email: 'Sincere@april.biz',
+//         address: {
+//             street: 'Kulas Light',
+//             suite: 'Apt. 556',
+//             city: 'Gwenborough',
+//             zipcode: '92998-3874',
+//             geo: {
+//                 lat: '-37.3159',
+//                 lng: '81.1496'
+//             }
+//         },
+//         phone: '1-770-736-8031 x56442',
+//         website: 'hildegard.org',
+//         company: {
+//             name: 'Romaguera-Crona',
+//             catchPhrase: 'Multi-layered client-server neural-net',
+//             bs: 'harness real-time e-markets'
+//         }
+//     },
+//     {
+//         id: 2,
+//         name: 'Ervin Howell',
+//         username: 'Antonette',
+//         email: 'Shanna@melissa.tv',
+//         address: {
+//             street: 'Victor Plains',
+//             suite: 'Suite 879',
+//             city: 'Wisokyburgh',
+//             zipcode: '90566-7771',
+//             geo: {
+//                 lat: '-43.9509',
+//                 lng: '-34.4618'
+//             }
+//         },
+//         phone: '010-692-6593 x09125',
+//         website: 'anastasia.net',
+//         company: {
+//             name: 'Deckow-Crist',
+//             catchPhrase: 'Proactive didactic contingency',
+//             bs: 'synergize scalable supply-chains'
+//         }
+//     },
+//     {
+//         id: 3,
+//         name: 'Clementine Bauch',
+//         username: 'Samantha',
+//         email: 'Nathan@yesenia.net',
+//         address: {
+//             street: 'Douglas Extension',
+//             suite: 'Suite 847',
+//             city: 'McKenziehaven',
+//             zipcode: '59590-4157',
+//             geo: {
+//                 lat: '-68.6102',
+//                 lng: '-47.0653'
+//             }
+//         },
+//         phone: '1-463-123-4447',
+//         website: 'ramiro.info',
+//         company: {
+//             name: 'Romaguera-Jacobson',
+//             catchPhrase: 'Face to face bifurcated interface',
+//             bs: 'e-enable strategic applications'
+//         }
+//     },
+//     {
+//         id: 4,
+//         name: 'Patricia Lebsack',
+//         username: 'Karianne',
+//         email: 'Julianne.OConner@kory.org',
+//         address: {
+//             street: 'Hoeger Mall',
+//             suite: 'Apt. 692',
+//             city: 'South Elvis',
+//             zipcode: '53919-4257',
+//             geo: {
+//                 lat: '29.4572',
+//                 lng: '-164.2990'
+//             }
+//         },
+//         phone: '493-170-9623 x156',
+//         website: 'kale.biz',
+//         company: {
+//             name: 'Robel-Corkery',
+//             catchPhrase: 'Multi-tiered zero tolerance productivity',
+//             bs: 'transition cutting-edge web services'
+//         }
+//     },
+//     {
+//         id: 5,
+//         name: 'Chelsey Dietrich',
+//         username: 'Kamren',
+//         email: 'Lucio_Hettinger@annie.ca',
+//         address: {
+//             street: 'Skiles Walks',
+//             suite: 'Suite 351',
+//             city: 'Roscoeview',
+//             zipcode: '33263',
+//             geo: {
+//                 lat: '-31.8129',
+//                 lng: '62.5342'
+//             }
+//         },
+//         phone: '(254)954-1289',
+//         website: 'demarco.info',
+//         company: {
+//             name: 'Keebler LLC',
+//             catchPhrase: 'User-centric fault-tolerant solution',
+//             bs: 'revolutionize end-to-end systems'
+//         }
+//     },
+//     {
+//         id: 6,
+//         name: 'Mrs. Dennis Schulist',
+//         username: 'Leopoldo_Corkery',
+//         email: 'Karley_Dach@jasper.info',
+//         address: {
+//             street: 'Norberto Crossing',
+//             suite: 'Apt. 950',
+//             city: 'South Christy',
+//             zipcode: '23505-1337',
+//             geo: {
+//                 lat: '-71.4197',
+//                 lng: '71.7478'
+//             }
+//         },
+//         phone: '1-477-935-8478 x6430',
+//         website: 'ola.org',
+//         company: {
+//             name: 'Considine-Lockman',
+//             catchPhrase: 'Synchronised bottom-line interface',
+//             bs: 'e-enable innovative applications'
+//         }
+//     },
+//     {
+//         id: 7,
+//         name: 'Kurtis Weissnat',
+//         username: 'Elwyn.Skiles',
+//         email: 'Telly.Hoeger@billy.biz',
+//         address: {
+//             street: 'Rex Trail',
+//             suite: 'Suite 280',
+//             city: 'Howemouth',
+//             zipcode: '58804-1099',
+//             geo: {
+//                 lat: '24.8918',
+//                 lng: '21.8984'
+//             }
+//         },
+//         phone: '210.067.6132',
+//         website: 'elvis.io',
+//         company: {
+//             name: 'Johns Group',
+//             catchPhrase: 'Configurable multimedia task-force',
+//             bs: 'generate enterprise e-tailers'
+//         }
+//     },
+//     {
+//         id: 8,
+//         name: 'Nicholas Runolfsdottir V',
+//         username: 'Maxime_Nienow',
+//         email: 'Sherwood@rosamond.me',
+//         address: {
+//             street: 'Ellsworth Summit',
+//             suite: 'Suite 729',
+//             city: 'Aliyaview',
+//             zipcode: '45169',
+//             geo: {
+//                 lat: '-14.3990',
+//                 lng: '-120.7677'
+//             }
+//         },
+//         phone: '586.493.6943 x140',
+//         website: 'jacynthe.com',
+//         company: {
+//             name: 'Abernathy Group',
+//             catchPhrase: 'Implemented secondary concept',
+//             bs: 'e-enable extensible e-tailers'
+//         }
+//     },
+//     {
+//         id: 9,
+//         name: 'Glenna Reichert',
+//         username: 'Delphine',
+//         email: 'Chaim_McDermott@dana.io',
+//         address: {
+//             street: 'Dayna Park',
+//             suite: 'Suite 449',
+//             city: 'Bartholomebury',
+//             zipcode: '76495-3109',
+//             geo: {
+//                 lat: '24.6463',
+//                 lng: '-168.8889'
+//             }
+//         },
+//         phone: '(775)976-6794 x41206',
+//         website: 'conrad.com',
+//         company: {
+//             name: 'Yost and Sons',
+//             catchPhrase: 'Switchable contextually-based project',
+//             bs: 'aggregate real-time technologies'
+//         }
+//     },
+//     {
+//         id: 10,
+//         name: 'Clementina DuBuque',
+//         username: 'Moriah.Stanton',
+//         email: 'Rey.Padberg@karina.biz',
+//         address: {
+//             street: 'Kattie Turnpike',
+//             suite: 'Suite 198',
+//             city: 'Lebsackbury',
+//             zipcode: '31428-2261',
+//             geo: {
+//                 lat: '-38.2386',
+//                 lng: '57.2232'
+//             }
+//         },
+//         phone: '024-648-3804',
+//         website: 'ambrose.net',
+//         company: {
+//             name: 'Hoeger LLC',
+//             catchPhrase: 'Centralized empowering task-force',
+//             bs: 'target end-to-end models'
+//         }
+//     }
+// ];
+// //
+// //
+// // document.write(`<div class="user-box">`);
+// // for (let i = 0; i < usersList.length; i++) {
+// //     document.write(`<div class="user-block">
+// //         <h2>${usersList[i].id} - ${usersList[i].name} - ${usersList[i].username}</h2>
+// //         <h3>${usersList[i].email} - ${usersList[i].phone}</h3>
+// //         <div class="address-block">
+// //         <p>City - ${usersList[i].address.city}</p>
+// //         <p>Street - ${usersList[i].address.street}</p>
+// //         <p>Suite - ${usersList[i].address.suite}</p>
+// //         <p>Zip code - ${usersList[i].address.zipcode}</p>
+// // </div>
+// // </div>`);
+// // }
+// // document.write(`</div>`);
+//
+// document.write(`<div class="user-box">`);
+// for (const info of usersList) {
+//     let {id, name, username, email, phone, address: {city, street, suite, zipcode}} = info;
+//     document.write(`<div class="user-block">
+//         <h2>${id} - ${name} - ${username}</h2>
+//         <h3>${email} - ${phone}</h3>
+//         <div class="address-block">
+//         <p>City - ${city}</p>
+//         <p>Street - ${street}</p>
+//         <p>Suite - ${suite}</p>
+//         <p>Zip code - ${zipcode}</p>
+// </div>
+// </div>`);
+// }
+// document.write(`</div>`);
+
+// CLASS WORK
+//
+//
+// --створити масив з:
+// - з 5 числових значень
+// - з 5 стічкових значень
+// - з 5 значень стрічкового, числового та булевого типу
+// - та вивести його в консоль
+//
+// let arr1 = [1,2,3,4,5];
+// for (const number of arr1) {
+//     console.log(number);
+// }
+//
+// let arr2 = ['one', 'two', 'thee', 'four', 'five'];
+// for (const string of arr2) {
+//     console.log(string);
+// }
+//
+// let arr3 = [1, 'one', true, 2, false];
+// for (const el of arr3) {
+//     console.log(el);
+// }
+//
+// -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
+//
+// let arr = [];
+// arr[0] = 1;
+// arr[1] = 2;
+// arr[2] = 3;
+// arr[3] = 4;
+// arr[4] = 5;
+// console.log(arr);
+//
+// - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
+//
+// for (let i = 0; i < 10; i++) document.write(`<div>Hello world</div>`);
+//
+// - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+//
+// for (let i = 0; i < 10; i++) document.write(`<div> Hi there it's number ${i}</div>`);
+//
+// - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+//
+// let i = 0;
+// while (i < 20) {
+//     document.write(`<h1>Hi there</h1>`)
+//     i++;
+// }
+//
+// - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+//
+// let i = 0;
+// while (i < 20) {
+//     document.write(`<h1>Hi there, it's number ${i}</h1>`)
+//     i++;
+// }
+//
+// - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
+//
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// for (const number of arr) {
+//     console.log(number);
+// }
+//
+// - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+//
+// let arr = ['hello', 'world', 'okten', 'cool', 'school', 'I', 'recommend', 'to', 'try', '!!!'];
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+//
+// - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+//
+// let arr = [1, true, 5, false, 8, 'string', 0, 'com', 7, 'true'];
+//
+// let i = 0;
+// while (i < arr.length) {
+//     console.log(arr[i]);
+//     i++;
+// }
+//
+// - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
+//
+// let arr = [1, true, 5, false, 8, 'string', 0, 'com', 7, 'true'];
+// for (const arrElement of arr) {
+//     if (typeof arrElement === "boolean")
+//         console.log(arrElement);
+// }
+//
+// - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
+//
+// let arr = [1, true, 5, false, 8, 'string', 0, 'com', 7, 'true'];
+// for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === "number")
+//         console.log(arr[i]);
+// }
+//
+// - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
+//
+// let arr = [1, true, 5, false, 8, 'string', 0, 'com', 7, 'true'];
+// let i = 0;
+// while (i < arr.length) {
+//     if (typeof arr[i] === "string") {
+//         console.log(arr[i]);
+//     }
+//     i++;
+// };
+//
+// - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+//
+// let arr = [];
+// arr[0] = 'hello';
+// arr[1] = 'world';
+// arr[2] = 32;
+// arr[3] = true;
+// arr[4] = 123;
+// arr[5] = false;
+// arr[6] = 'qwerty';
+// arr[7] = 23;
+// arr[8] = 'asdf';
+// arr[9] = true;
+//
+// for (const arrElement of arr) {
+//     console.log(arrElement);
+// }
+//
+// - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+//
+// for (let i = 0; i < 10; i++) {
+//     console.log(i);
+//     document.write(`<div>${i}</div>`);
+// }
+//
+// - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+//
+// for (let i = 0; i < 100; i++) {
+//     console.log(i);
+//     document.write(`<div>${i}</div>`)
+// }
+//
+// - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+//
+// for (let i = 0; i < 100; i+=2) {
+//     console.log(i);
+//     document.write(`<div>${i}</div>`)
+// }
+//
+// - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+//
+// for (let i = 0; i < 100; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i);
+//         document.write(`<div>${i}</div>`);
+//     }
+// }
+//
+// - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+//
+// for (let i = 0; i < 100; i++) {
+//     if (i%2===1){
+//         console.log(i);
+//         document.write(`<div>${i}</div>`);
+//     }
+// }
+//
+//
+// - Дано 2 масиви з рівною кількістю об'єктів.
+// Масиви:
+let usersWithId = [
+    {id: 1, name: 'vasya', age: 31, status: false},
+    {id: 2, name: 'petya', age: 30, status: true},
+    {id: 3, name: 'kolya', age: 29, status: true},
+    {id: 4, name: 'olya', age: 28, status: false}
+];
+
+let citiesWithId = [
+    {user_id: 3, country: 'USA', city: 'Portland'},
+    {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+    {user_id: 2, country: 'Poland', city: 'Krakow'},
+    {user_id: 4, country: 'USA', city: 'Miami'}
 ];
 //
-//
-document.write(`<div class="user-box">`);
-for (let i = 0; i < usersList.length; i++) {
-    document.write(`<div class="user-block">
-<h2>${usersList[i].id} - ${usersList[i].name} - ${usersList[i].username}</h2>
-<h3>${usersList[i].email} - ${usersList[i].phone}</h3>
-<div class="address-block">
-<p>City - ${usersList[i].address.city}</p>
-<p>Street - ${usersList[i].address.street}</p>
-<p>Suite - ${usersList[i].address.suite}</p>
-<p>Zip code - ${usersList[i].address.zipcode}</p>
-</div>
-</div>`);
+// З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+//     Записати цей об'єкт в новий масив
+// Example:
+//     let usersWithCities = [
+//         {
+//             id: 1, // <===
+//             name: 'vasya',
+//             age: 31,
+//             status: false,
+//             address: {
+//                 user_id: 1, // <===
+//                 country: 'Ukraine',
+//                 city: 'Ternopil'
+//             }
+//         },
+//         // TO BE CONTINUED .....
+//     ]
+let usersWithCities = [];
+
+// for (const element1 of usersWithId) {
+//     for (const element2 of citiesWithId) {
+//         if (element1.id === element2.user_id){
+//             element1.address = element2;
+//             usersWithCities.push(element1);
+//         }
+//     }
+// }
+// console.log(usersWithCities);
+
+for (let i = 0; i < usersWithId.length; i++) {
+    for (let j = 0; j < citiesWithId.length; j++) {
+        if (usersWithId[i].id === citiesWithId[j].user_id){
+            usersWithId[i].address = citiesWithId[j];
+            usersWithCities.push(usersWithId[i]);
+        }
+    }
 }
-document.write(`</div>`);
+console.log(usersWithCities);
