@@ -373,3 +373,55 @@
 //     str += letter;
 // }
 // console.log(str);
+
+//ADDITIONAL
+//
+// -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+//   EXAMPLE:
+//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+//
+let swap = function (arr, i) {
+    if (i < arr.length){
+        const swapper = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = swapper;
+
+        console.log(arr);
+    }
+}
+swap([9,8,0,4], 0);
+swap([9,8,0,4], 1);
+swap([9,8,0,4], 2);
+//
+// - Дано список імен.
+// let n1 = '    Harry       Potter      '
+// let n2 = '    Ron       Whisley      '
+// let n3 = '    Hermione       Granger      '
+// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+// let n1 = 'Harry Potter'
+// let n2 = 'Ron Whisley'
+// let n3 = 'Hermione Granger'
+//
+// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+// Двожина масиву від 2 до 100
+// EXAMPLE:
+// [1,0,6,0,3] => [1,6,3,0,0]
+// [0,1,2,3,4] => [1,2,3,4,0]
+// [0,0,1,0]   => [1,0,0,0]
+//
+
+function shift(arr) {
+    let zeros = [];
+    let numbers = [];
+
+    for (const number of arr) {
+        number === 0? zeros.push(number) : numbers.push(number);
+    }
+    return numbers.concat(zeros);
+}
+
+console.log(shift([1, 0, 6, 0, 3]));
+console.log(shift([0, 1, 2, 3, 4]));
+console.log(shift([0, 0, 1, 0]));
