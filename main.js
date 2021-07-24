@@ -79,3 +79,100 @@
 
 // CLASS WORK
 //
+//Взяти файл template_2.html та працювати в ньому
+// 1) Напишіть код, який :
+//     a) змінює колір тексту елемнту з ід main_header на назву групи в якій ви вчитесь (mon-year) // колір на текс поміняти не можу, тому буду міняти текст на текст
+//
+// const changeText = document.getElementById('main_header');
+// changeText.innerText = 'June(Feb)-2021';
+//
+//     b) робить шириниу елементу ul 400px
+//
+// const changeUlWidth = document.getElementsByTagName('ul');
+// for (const tag of changeUlWidth) {
+//     tag.style.backgroundColor = 'darkred'; // щоб було видно ширину
+//     tag.style.width = '400px';
+// }
+//
+//     c) робить шириниу всіх елементів з класом linkList шириною 50%
+//
+// const changeWidth = document.getElementsByClassName('linkList');
+// for (const el of changeWidth) {
+//     el.style.backgroundColor = 'olive'; // щоб було видно ширину
+//     el.style.width = '50%';
+// }
+//
+//     d) отримує текст який зберігається в елементі з класом listElement2
+//
+// const getText = document.getElementsByClassName('listElement2');
+// for (const textElement of getText) {
+//     console.log(textElement.innerText);
+// }
+//
+//     e) отримує всі елементи li та змінює ім колір фону на сірий
+//
+// const changeBackgroundColor = document.getElementsByTagName('li');
+// for (const el of changeBackgroundColor) {
+//     el.style.backgroundColor = 'silver';
+// }
+//
+//     f) отримує всі елементи 'a' та додає їм клас anchor
+//
+// const addClass = document.getElementsByTagName('a');
+// for (const el of addClass) {
+//     el.classList.add('anchor');
+// }
+//
+//     g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів
+//
+// const changeFont = document.getElementsByTagName('a');
+// for (const a of changeFont) {
+//     if (a.innerText === 'link3') a.style.fontSize = '40px';
+// }
+//
+//     h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
+//
+// const addClass = document.getElementsByTagName('a');
+// for (const el of addClass) {
+//     el.classList.add(`element_${el.innerText}`);
+// }
+//
+//     i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
+//
+// const changeBackgroundColor = document.getElementsByClassName('sub-header');
+// for (const el of changeBackgroundColor) {
+//     let getColor = prompt('Whar color should I change elements to?');
+//     el.style.backgroundColor = `${getColor}`;
+// }
+//
+//     j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
+//
+// const changeBackgroundColor = document.getElementsByClassName('sub-header');
+// for (const el of changeBackgroundColor) {
+//     if (el.innerText === 'content 2 segment') {
+//         let getColor = prompt('Whar color should I change elements to?');
+//     el.style.backgroundColor = `${getColor}`;
+//     }
+// }
+//
+//     k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+//
+// const changeText = document.getElementsByClassName('content_1');
+// for (const changeTextElement of changeText) {
+//     const getText = prompt('What text do I need to change it to? ');
+//     changeTextElement.innerText = `${getText}`;
+// }
+//
+//     l) отримати елементи p та змінити їм padding на 20px
+//
+// const changePadding = document.getElementsByTagName('p');
+// for (const changePaddingElement of changePadding) {
+//     changePaddingElement.style.padding = '20px';
+// }
+//
+//     m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year)
+//
+// const changeText = document.getElementsByClassName('text2');
+// for (const changeTextElement of changeText) {
+//     changeTextElement.innerText = 'June(Feb)-2021';
+// }
