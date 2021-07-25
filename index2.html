@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .nameStyle {
+                background: antiquewhite;
+                width: 200px;
+                border: 2px solid crimson;
+                border-radius: 10px;
+                text-align: center;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="margin-left: 10px">It's index 2 file</div>
+        <script>
+
+            let data = localStorage.getItem('name');
+            let div = document.createElement('div');
+            div.classList.add('nameStyle');
+
+
+            div.append(data);
+            document.body.appendChild(div);
+        </script>
+    </body>
+</html>
