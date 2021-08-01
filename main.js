@@ -157,7 +157,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
                                         for (const comment of comments) {
                                             const oneComment = document.createElement('p');
-                                            postBox.append(oneComment);
+                                            commentBox.append(oneComment);
                                             oneComment.innerText = `${comment.id} - ${comment.name}`;
                                         }
                                     })
